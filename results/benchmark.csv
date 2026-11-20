@@ -1,0 +1,9 @@
+model,arch,method,dataset,input_res,params_M,ckpt_size_mb,torch_top1,torch_top5,torch_latency_ms,peak_mem_mb,onnx_size_mb,onnx_top1,onnx_latency_ms,onnx_throughput_ips_b32
+teacher,resnet50,teacher,cifar100,32,23.7053,95.1326,39.15,72.35,23.0008,8.1044,,,,
+mobilenetv2_baseline,mobilenetv2,baseline,cifar100,32,2.352,9.6447,8.45,27.1,8.0133,11.083,9.3827,8.45,2.131,466.7172
+mobilenetv2_kd,mobilenetv2,kd,cifar100,32,2.352,9.6431,6.2,21.2,8.2013,11.083,9.3827,6.2,2.078,476.9618
+squeezenet_baseline,squeezenet,baseline,cifar100,32,0.7767,3.1797,8.45,25.35,5.0199,4.734,3.1111,8.45,1.3482,673.49
+squeezenet_kd,squeezenet,kd,cifar100,32,0.7767,3.179,4.55,16.25,5.1197,4.734,3.1111,4.55,1.3821,665.1476
+efficientnet_lite0_baseline,efficientnet_lite0,baseline,cifar100,32,3.4991,14.2612,9.45,28.15,8.7947,11.1863,13.953,9.45,2.907,350.7853
+efficientnet_lite0_kd,efficientnet_lite0,kd,cifar100,32,3.4991,14.2596,6.15,21.75,9.1622,11.1863,13.953,6.15,2.8665,359.1807
+nas_best,nas,nas,cifar10,24,0.0795,0.3418,64.15,97.0,1.2686,1.2855,0.3198,64.15,0.4331,2438.2922

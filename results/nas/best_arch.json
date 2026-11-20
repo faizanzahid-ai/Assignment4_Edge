@@ -1,0 +1,32 @@
+{
+  "config": {
+    "resolution": 24,
+    "stem_channels": 16,
+    "stages": [
+      {
+        "depth": 1,
+        "channels": 96,
+        "kernel": 3,
+        "block": "conv",
+        "activation": "relu"
+      },
+      {
+        "depth": 3,
+        "channels": 128,
+        "kernel": 7,
+        "block": "dws",
+        "activation": "leaky_relu"
+      }
+    ],
+    "dropout": 0.2
+  },
+  "summary": "r24 s16 | conv k3 96x1 relu | dws k7 128x3 leaky_relu",
+  "search_metrics": {
+    "val_acc": 31.1,
+    "fitness": 35.331,
+    "latency_ms": 1.419,
+    "size_mb": 0.3417,
+    "peak_mem_mb": 1.286,
+    "params": 79546
+  }
+}

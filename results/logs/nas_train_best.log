@@ -1,0 +1,6 @@
+Best architecture: r24 s16 | conv k3 96x1 relu | dws k7 128x3 leaky_relu | {'params': 79546, 'size_mb': 0.341709, 'latency_ms': 1.934400002937764, 'peak_mem_mb': 1.285504} | {'arch_file': 'D:\\Edge assignment\\edge_a4\\results\\nas\\best_arch.json', 'epochs': 4, 'lr': 0.05, 'batch_size': 128, 'train_subset': 25000, 'threads': 2, 'seed': 42}
+[nas_best] epoch   1/4 | train loss 1.817 acc 31.83% | test loss 1.550 top1 43.15% top5 92.21% | 170.2s
+[nas_best] epoch   2/4 | train loss 1.433 acc 47.89% | test loss 1.383 top1 50.57% top5 93.43% | 149.0s
+[nas_best] epoch   3/4 | train loss 1.227 acc 55.95% | test loss 1.149 top1 59.59% top5 95.69% | 142.0s
+[nas_best] epoch   4/4 | train loss 1.081 acc 61.23% | test loss 0.992 top1 64.64% top5 96.84% | 141.4s
+Saved D:\Edge assignment\edge_a4\checkpoints\nas_best.pt (test top-1 64.64%)

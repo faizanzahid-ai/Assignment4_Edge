@@ -1,0 +1,140 @@
+mobilenetv2_baseline         -> mobilenetv2_baseline.onnx          9.383 MB | max |torch-ort| = 1.31e-06
+mobilenetv2_kd               -> mobilenetv2_kd.onnx                9.383 MB | max |torch-ort| = 8.34e-07
+squeezenet_baseline          -> squeezenet_baseline.onnx           3.111 MB | max |torch-ort| = 1.79e-06
+squeezenet_kd                -> squeezenet_kd.onnx                 3.111 MB | max |torch-ort| = 7.45e-07
+efficientnet_lite0_baseline  -> efficientnet_lite0_baseline.onnx  13.953 MB | max |torch-ort| = 1.01e-06
+efficientnet_lite0_kd        -> efficientnet_lite0_kd.onnx        13.953 MB | max |torch-ort| = 1.07e-06
+nas_best                     -> nas_best.onnx                      0.320 MB | max |torch-ort| = 1.43e-06
+
+=== mobilenetv2_baseline  (mobilenetv2, cifar100, input 32px)
+  test0000_beaver.png          -> caterpillar 4.0%, fox 3.3%, snail 3.1%
+  test0100_dolphin.png         -> mountain 17.1%, dolphin 12.7%, shark 9.4%
+  test0200_otter.png           -> telephone 13.2%, dinosaur 9.3%, cockroach 6.2%
+  test0300_seal.png            -> tulip 5.4%, aquarium_fish 3.3%, sunflower 3.2%
+  test0400_whale.png           -> telephone 10.6%, dinosaur 5.6%, trout 5.2%
+  test0500_aquarium_fish.png   -> orange 10.9%, aquarium_fish 9.7%, sunflower 9.7%
+  6 images in 66.8 ms (CPU, PyTorch)
+
+=== mobilenetv2_kd  (mobilenetv2, cifar100, input 32px)
+  test0000_beaver.png          -> kangaroo 3.6%, shrew 3.6%, raccoon 3.4%
+  test0100_dolphin.png         -> shark 11.9%, whale 10.8%, dolphin 9.6%
+  test0200_otter.png           -> chair 4.1%, cockroach 3.9%, lamp 3.3%
+  test0300_seal.png            -> tulip 4.3%, sunflower 3.2%, boy 2.5%
+  test0400_whale.png           -> chair 4.9%, trout 4.3%, lamp 4.2%
+  test0500_aquarium_fish.png   -> poppy 13.9%, tulip 11.5%, aquarium_fish 8.8%
+  6 images in 18.5 ms (CPU, PyTorch)
+
+=== squeezenet_baseline  (squeezenet, cifar100, input 32px)
+  test0000_beaver.png          -> leopard 6.1%, kangaroo 5.5%, shrew 4.0%
+  test0100_dolphin.png         -> whale 35.3%, ray 10.2%, shark 9.3%
+  test0200_otter.png           -> telephone 11.7%, chair 8.9%, trout 7.0%
+  test0300_seal.png            -> aquarium_fish 6.3%, poppy 5.7%, tulip 5.0%
+  test0400_whale.png           -> telephone 8.0%, trout 4.4%, chair 3.5%
+  test0500_aquarium_fish.png   -> aquarium_fish 10.6%, poppy 8.1%, sweet_pepper 6.1%
+  6 images in 19.1 ms (CPU, PyTorch)
+
+=== squeezenet_kd  (squeezenet, cifar100, input 32px)
+  test0000_beaver.png          -> raccoon 2.4%, kangaroo 2.2%, leopard 2.2%
+  test0100_dolphin.png         -> mountain 9.9%, whale 7.9%, dolphin 7.0%
+  test0200_otter.png           -> rocket 2.3%, bowl 2.2%, lamp 2.1%
+  test0300_seal.png            -> tulip 2.2%, crab 2.1%, mushroom 2.1%
+  test0400_whale.png           -> bowl 2.4%, lamp 2.2%, spider 1.9%
+  test0500_aquarium_fish.png   -> tulip 2.2%, mouse 1.9%, mushroom 1.8%
+  6 images in 11.0 ms (CPU, PyTorch)
+
+=== efficientnet_lite0_baseline  (efficientnet_lite0, cifar100, input 32px)
+  test0000_beaver.png          -> leopard 6.1%, porcupine 4.2%, lion 4.1%
+  test0100_dolphin.png         -> whale 19.0%, cloud 18.4%, shark 13.2%
+  test0200_otter.png           -> trout 9.7%, chair 8.1%, telephone 6.5%
+  test0300_seal.png            -> tulip 8.0%, apple 7.3%, rose 6.1%
+  test0400_whale.png           -> trout 10.2%, chair 6.7%, telephone 5.3%
+  test0500_aquarium_fish.png   -> poppy 23.8%, rose 12.7%, orange 9.5%
+  6 images in 23.4 ms (CPU, PyTorch)
+
+=== efficientnet_lite0_kd  (efficientnet_lite0, cifar100, input 32px)
+  test0000_beaver.png          -> raccoon 3.7%, lion 3.3%, kangaroo 3.1%
+  test0100_dolphin.png         -> shark 10.5%, whale 8.2%, mountain 6.6%
+  test0200_otter.png           -> chair 3.5%, lamp 2.8%, cup 2.6%
+  test0300_seal.png            -> can 2.7%, woman 2.7%, girl 2.3%
+  test0400_whale.png           -> otter 2.2%, couch 2.0%, seal 1.9%
+  test0500_aquarium_fish.png   -> orange 17.9%, sunflower 17.5%, aquarium_fish 6.9%
+  6 images in 18.7 ms (CPU, PyTorch)
+
+=== nas_best  (nas, cifar10, input 24px)
+  test0000_airplane.png        -> ship 86.5%, airplane 12.6%, automobile 0.4%
+  test1000_automobile.png      -> automobile 36.4%, dog 25.6%, airplane 14.8%
+  test2000_bird.png            -> bird 52.1%, dog 29.5%, deer 8.7%
+  test3000_cat.png             -> dog 54.1%, cat 41.2%, frog 2.1%
+  test4000_deer.png            -> airplane 33.7%, bird 33.0%, deer 16.4%
+  test5000_dog.png             -> dog 70.5%, cat 22.3%, bird 2.5%
+  6 images in 8.0 ms (CPU, PyTorch)
+ONNX Runtime 1.32.0 | providers ['AzureExecutionProvider', 'CPUExecutionProvider']
+
+=== mobilenetv2_baseline [mobilenetv2_baseline.onnx, 9.38 MB, input 32px] latency(batch 1, 1 thread) 2.08 ms
+  test0000_beaver.png          -> caterpillar 4.0%, fox 3.3%, snail 3.1%
+  test0100_dolphin.png         -> mountain 17.1%, dolphin 12.7%, shark 9.4%
+  test0200_otter.png           -> telephone 13.2%, dinosaur 9.3%, cockroach 6.2%
+  test0300_seal.png            -> tulip 5.4%, aquarium_fish 3.3%, sunflower 3.2%
+  test0400_whale.png           -> telephone 10.6%, dinosaur 5.6%, trout 5.2%
+  test0500_aquarium_fish.png   -> orange 10.9%, aquarium_fish 9.7%, sunflower 9.7%
+
+=== mobilenetv2_kd [mobilenetv2_kd.onnx, 9.38 MB, input 32px] latency(batch 1, 1 thread) 2.15 ms
+  test0000_beaver.png          -> kangaroo 3.6%, shrew 3.6%, raccoon 3.4%
+  test0100_dolphin.png         -> shark 11.9%, whale 10.8%, dolphin 9.6%
+  test0200_otter.png           -> chair 4.1%, cockroach 3.9%, lamp 3.3%
+  test0300_seal.png            -> tulip 4.3%, sunflower 3.2%, boy 2.5%
+  test0400_whale.png           -> chair 4.9%, trout 4.3%, lamp 4.2%
+  test0500_aquarium_fish.png   -> poppy 13.9%, tulip 11.5%, aquarium_fish 8.8%
+
+=== squeezenet_baseline [squeezenet_baseline.onnx, 3.11 MB, input 32px] latency(batch 1, 1 thread) 1.34 ms
+  test0000_beaver.png          -> leopard 6.1%, kangaroo 5.5%, shrew 4.0%
+  test0100_dolphin.png         -> whale 35.3%, ray 10.2%, shark 9.3%
+  test0200_otter.png           -> telephone 11.7%, chair 8.9%, trout 7.0%
+  test0300_seal.png            -> aquarium_fish 6.3%, poppy 5.7%, tulip 5.0%
+  test0400_whale.png           -> telephone 8.0%, trout 4.4%, chair 3.5%
+  test0500_aquarium_fish.png   -> aquarium_fish 10.6%, poppy 8.1%, sweet_pepper 6.1%
+
+=== squeezenet_kd [squeezenet_kd.onnx, 3.11 MB, input 32px] latency(batch 1, 1 thread) 1.34 ms
+  test0000_beaver.png          -> raccoon 2.4%, kangaroo 2.2%, leopard 2.2%
+  test0100_dolphin.png         -> mountain 9.9%, whale 7.9%, dolphin 7.0%
+  test0200_otter.png           -> rocket 2.3%, bowl 2.2%, lamp 2.1%
+  test0300_seal.png            -> tulip 2.2%, crab 2.1%, mushroom 2.1%
+  test0400_whale.png           -> bowl 2.4%, lamp 2.2%, spider 1.9%
+  test0500_aquarium_fish.png   -> tulip 2.2%, mouse 1.9%, mushroom 1.8%
+
+=== efficientnet_lite0_baseline [efficientnet_lite0_baseline.onnx, 13.95 MB, input 32px] latency(batch 1, 1 thread) 2.94 ms
+  test0000_beaver.png          -> leopard 6.1%, porcupine 4.2%, lion 4.1%
+  test0100_dolphin.png         -> whale 19.0%, cloud 18.4%, shark 13.2%
+  test0200_otter.png           -> trout 9.7%, chair 8.1%, telephone 6.5%
+  test0300_seal.png            -> tulip 8.0%, apple 7.3%, rose 6.1%
+  test0400_whale.png           -> trout 10.2%, chair 6.7%, telephone 5.3%
+  test0500_aquarium_fish.png   -> poppy 23.8%, rose 12.7%, orange 9.5%
+
+=== efficientnet_lite0_kd [efficientnet_lite0_kd.onnx, 13.95 MB, input 32px] latency(batch 1, 1 thread) 2.88 ms
+  test0000_beaver.png          -> raccoon 3.7%, lion 3.3%, kangaroo 3.1%
+  test0100_dolphin.png         -> shark 10.5%, whale 8.2%, mountain 6.6%
+  test0200_otter.png           -> chair 3.5%, lamp 2.8%, cup 2.6%
+  test0300_seal.png            -> can 2.7%, woman 2.7%, girl 2.3%
+  test0400_whale.png           -> otter 2.2%, couch 2.0%, seal 1.9%
+  test0500_aquarium_fish.png   -> orange 17.9%, sunflower 17.5%, aquarium_fish 6.9%
+
+=== nas_best [nas_best.onnx, 0.32 MB, input 24px] latency(batch 1, 1 thread) 0.42 ms
+  test0000_airplane.png        -> ship 84.1%, airplane 14.5%, bird 0.6%
+  test1000_automobile.png      -> dog 32.2%, automobile 26.6%, cat 16.6%
+  test2000_bird.png            -> bird 58.6%, dog 26.5%, deer 7.3%
+  test3000_cat.png             -> dog 52.9%, cat 42.8%, bird 1.8%
+  test4000_deer.png            -> bird 34.1%, airplane 33.8%, deer 14.3%
+  test5000_dog.png             -> dog 72.1%, cat 22.6%, bird 2.2%
+model=teacher | arch=resnet50 | method=teacher | dataset=cifar100 | input_res=32 | params_M=23.705 | ckpt_size_mb=95.133 | torch_top1=39.150 | torch_top5=72.350 | torch_latency_ms=23.001 | peak_mem_mb=8.104
+model=mobilenetv2_baseline | arch=mobilenetv2 | method=baseline | dataset=cifar100 | input_res=32 | params_M=2.352 | ckpt_size_mb=9.645 | torch_top1=8.450 | torch_top5=27.100 | torch_latency_ms=8.013 | peak_mem_mb=11.083 | onnx_size_mb=9.383 | onnx_top1=8.450 | onnx_latency_ms=2.131 | onnx_throughput_ips_b32=466.717
+model=mobilenetv2_kd | arch=mobilenetv2 | method=kd | dataset=cifar100 | input_res=32 | params_M=2.352 | ckpt_size_mb=9.643 | torch_top1=6.200 | torch_top5=21.200 | torch_latency_ms=8.201 | peak_mem_mb=11.083 | onnx_size_mb=9.383 | onnx_top1=6.200 | onnx_latency_ms=2.078 | onnx_throughput_ips_b32=476.962
+model=squeezenet_baseline | arch=squeezenet | method=baseline | dataset=cifar100 | input_res=32 | params_M=0.777 | ckpt_size_mb=3.180 | torch_top1=8.450 | torch_top5=25.350 | torch_latency_ms=5.020 | peak_mem_mb=4.734 | onnx_size_mb=3.111 | onnx_top1=8.450 | onnx_latency_ms=1.348 | onnx_throughput_ips_b32=673.490
+model=squeezenet_kd | arch=squeezenet | method=kd | dataset=cifar100 | input_res=32 | params_M=0.777 | ckpt_size_mb=3.179 | torch_top1=4.550 | torch_top5=16.250 | torch_latency_ms=5.120 | peak_mem_mb=4.734 | onnx_size_mb=3.111 | onnx_top1=4.550 | onnx_latency_ms=1.382 | onnx_throughput_ips_b32=665.148
+model=efficientnet_lite0_baseline | arch=efficientnet_lite0 | method=baseline | dataset=cifar100 | input_res=32 | params_M=3.499 | ckpt_size_mb=14.261 | torch_top1=9.450 | torch_top5=28.150 | torch_latency_ms=8.795 | peak_mem_mb=11.186 | onnx_size_mb=13.953 | onnx_top1=9.450 | onnx_latency_ms=2.907 | onnx_throughput_ips_b32=350.785
+model=efficientnet_lite0_kd | arch=efficientnet_lite0 | method=kd | dataset=cifar100 | input_res=32 | params_M=3.499 | ckpt_size_mb=14.260 | torch_top1=6.150 | torch_top5=21.750 | torch_latency_ms=9.162 | peak_mem_mb=11.186 | onnx_size_mb=13.953 | onnx_top1=6.150 | onnx_latency_ms=2.866 | onnx_throughput_ips_b32=359.181
+model=nas_best | arch=nas | method=nas | dataset=cifar10 | input_res=24 | params_M=0.080 | ckpt_size_mb=0.342 | torch_top1=64.150 | torch_top5=97.000 | torch_latency_ms=1.269 | peak_mem_mb=1.286 | onnx_size_mb=0.320 | onnx_top1=64.150 | onnx_latency_ms=0.433 | onnx_throughput_ips_b32=2438.292
+
+Saved D:\Edge assignment\edge_a4\results\benchmark.csv
+Saved D:\Edge assignment\edge_a4\results\q1\kd_vs_baseline.csv
+Saved D:\Edge assignment\edge_a4\docs\Technical_Report.pdf
+POST_DONE

@@ -1,0 +1,9 @@
+{
+  "name": "efficientnet_lite0_baseline",
+  "arch": "efficientnet_lite0",
+  "dataset": "cifar100",
+  "num_classes": 100,
+  "resolution": 32,
+  "method": "baseline",
+  "train_top1": 9.45
+}

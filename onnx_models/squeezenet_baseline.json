@@ -1,0 +1,9 @@
+{
+  "name": "squeezenet_baseline",
+  "arch": "squeezenet",
+  "dataset": "cifar100",
+  "num_classes": 100,
+  "resolution": 32,
+  "method": "baseline",
+  "train_top1": 8.45
+}

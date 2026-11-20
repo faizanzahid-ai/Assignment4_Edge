@@ -1,0 +1,9 @@
+{
+  "name": "nas_best",
+  "arch": "nas",
+  "dataset": "cifar10",
+  "num_classes": 10,
+  "resolution": 24,
+  "method": "nas",
+  "train_top1": 64.64
+}

@@ -1,0 +1,44 @@
+NAS start | constraints {'max_latency_ms': 3.0, 'max_size_mb': 1.0, 'max_peak_mem_mb': 4.0} | {'population': 6, 'tournament': 3, 'cycles': 14, 'proxy_epochs': 1, 'proxy_train': 6000, 'proxy_val': 1000, 'batch_size': 128, 'lr': 0.05, 'w': -0.07, 'max_latency_ms': 3.0, 'max_size_mb': 1.0, 'max_peak_mem_mb': 4.0, 'latency_threads': 1, 'threads': 2, 'seed': 0}
+[  0] REJECTED r28 s16 | dws k3 128x2 leaky_relu | dws k5 128x2 leaky_relu | conv k3 128x2 leaky_relu -> size 1.464MB > 1.0MB
+[  1] val 21.50% fit  26.69 | 0.96ms 0.142MB mem 0.841MB | r24 s32 | dws k7 96x1 silu | dws k5 96x2 leaky_relu
+[  2] REJECTED r24 s32 | conv k7 32x1 relu | mbconv k7 96x3 relu | mbconv k3 128x2 hardswish | conv k7 128x1 relu6 -> latency 5.39ms > 3.0ms; size 5.258MB > 1.0MB
+[  3] val 23.70% fit  24.45 | 2.86ms 0.673MB mem 2.084MB | r24 s24 | conv k5 32x3 hardswish | mbconv k3 64x3 hardswish
+[  4] REJECTED r28 s32 | mbconv k5 64x2 relu6 | conv k3 64x1 leaky_relu -> peak mem 5.91MB > 4.0MB
+[  5] val 31.10% fit  35.33 | 1.42ms 0.342MB mem 1.286MB | r24 s16 | conv k3 96x1 relu | dws k7 128x3 leaky_relu
+[  6] REJECTED r20 s8 | dws k7 128x2 silu | mbconv k5 128x1 relu | conv k3 128x1 hardswish | dws k3 128x2 silu -> latency 6.94ms > 3.0ms; size 1.470MB > 1.0MB
+[  7] REJECTED r32 s16 | mbconv k7 24x1 leaky_relu | conv k3 128x1 relu6 | dws k3 128x2 relu | mbconv k3 128x1 relu -> latency 3.26ms > 3.0ms
+[  8] val 23.10% fit  24.98 | 2.03ms 0.483MB mem 1.191MB | r28 s32 | dws k7 96x1 leaky_relu | conv k3 128x1 hardswish
+[  9] val 22.20% fit  24.85 | 2.57ms 0.233MB mem 3.627MB | r24 s16 | mbconv k3 64x2 relu | dws k5 96x1 silu
+[ 10] REJECTED r32 s8 | mbconv k5 24x1 hardswish | conv k7 96x2 relu | dws k7 128x3 hardswish | mbconv k7 128x1 relu -> latency 10.17ms > 3.0ms; size 3.211MB > 1.0MB
+[ 11] REJECTED r28 s16 | conv k5 16x3 relu6 | dws k7 48x2 hardswish | dws k5 64x3 silu | mbconv k3 128x1 relu6 -> latency 4.37ms > 3.0ms
+[ 12] REJECTED r32 s8 | mbconv k5 96x2 leaky_relu | mbconv k5 128x1 leaky_relu -> latency 9.16ms > 3.0ms; peak mem 12.61MB > 4.0MB
+[ 13] REJECTED r24 s8 | conv k7 16x2 silu | conv k7 48x3 relu | conv k5 96x2 silu -> latency 4.58ms > 3.0ms; size 2.539MB > 1.0MB
+[ 14] val 22.00% fit  27.66 | 1.13ms 0.101MB mem 0.242MB | r20 s16 | dws k7 16x2 hardswish | conv k7 24x1 leaky_relu
+[ 15] REJECTED r24 s16 | conv k3 96x2 relu | dws k7 128x3 leaky_relu -> latency 4.78ms > 3.0ms
+[ 16] val 17.40% fit  19.36 | 2.29ms 0.285MB mem 1.286MB | r24 s16 | conv k3 96x1 relu | dws k3 128x3 leaky_relu
+[ 17] val 23.00% fit  24.50 | 2.58ms 0.471MB mem 0.739MB | r28 s16 | dws k7 96x1 leaky_relu | conv k3 128x1 hardswish
+[ 18] val 25.40% fit  28.39 | 1.32ms 0.466MB mem 0.664MB | r28 s8 | dws k7 96x1 leaky_relu | conv k3 128x1 hardswish
+[ 19] val 22.50% fit  28.05 | 1.28ms 0.101MB mem 0.349MB | r24 s16 | dws k7 16x2 hardswish | conv k7 24x1 leaky_relu
+[ 20] REJECTED r28 s8 | dws k7 96x3 leaky_relu | conv k3 128x1 hardswish -> latency 3.72ms > 3.0ms
+[ 21] REJECTED r28 s8 | dws k7 96x1 leaky_relu | conv k7 128x1 hardswish -> latency 5.69ms > 3.0ms; size 2.432MB > 1.0MB
+[ 22] val 27.10% fit  28.35 | 2.58ms 0.610MB mem 0.914MB | r28 s8 | conv k7 96x1 leaky_relu | conv k3 128x1 hardswish
+[ 23] val 26.00% fit  28.99 | 1.36ms 0.466MB mem 0.34MB | r20 s8 | dws k7 96x1 leaky_relu | conv k3 128x1 hardswish
+[ 24] REJECTED r28 s8 | dws k7 96x1 leaky_relu | conv k3 128x2 hardswish -> latency 3.68ms > 3.0ms; size 1.060MB > 1.0MB
+[ 25] val 22.70% fit  23.83 | 2.84ms 0.529MB mem 1.869MB | r28 s8 | dws k7 96x2 leaky_relu | conv k3 128x1 hardswish
+[ 26] val 25.60% fit  28.45 | 1.43ms 0.466MB mem 0.34MB | r20 s8 | dws k7 96x1 leaky_relu | conv k3 128x1 silu
+[ 27] val 20.60% fit  21.71 | 2.40ms 0.591MB mem 1.571MB | r20 s8 | dws k7 96x3 leaky_relu | conv k3 128x1 hardswish
+[ 28] REJECTED r28 s8 | conv k7 96x2 leaky_relu | conv k3 128x1 hardswish -> latency 12.81ms > 3.0ms; size 2.419MB > 1.0MB
+[ 29] REJECTED r28 s8 | conv k7 96x1 leaky_relu | conv k3 128x3 hardswish -> latency 5.09ms > 3.0ms; size 1.797MB > 1.0MB
+[ 30] REJECTED r28 s8 | conv k7 96x1 leaky_relu | conv k3 128x2 hardswish -> latency 4.16ms > 3.0ms; size 1.203MB > 1.0MB
+[ 31] REJECTED r28 s32 | conv k7 96x1 leaky_relu | conv k3 128x1 hardswish -> latency 5.53ms > 3.0ms; size 1.064MB > 1.0MB
+[ 32] REJECTED r28 s8 | conv k7 96x1 leaky_relu | conv k7 128x1 hardswish -> latency 5.48ms > 3.0ms; size 2.576MB > 1.0MB
+[ 33] REJECTED r28 s8 | conv k7 96x3 leaky_relu | conv k3 128x1 hardswish -> latency 21.33ms > 3.0ms; size 4.229MB > 1.0MB
+[ 34] REJECTED r28 s8 | conv k7 96x1 leaky_relu | conv k5 128x1 hardswish -> latency 5.62ms > 3.0ms; size 1.396MB > 1.0MB
+[ 35] REJECTED r28 s8 | conv k7 96x1 leaky_relu | conv k3 128x1 hardswish -> latency 3.19ms > 3.0ms
+[ 36] val 23.50% fit  24.14 | 2.69ms 0.761MB mem 0.94MB | r28 s16 | conv k7 96x1 leaky_relu | conv k3 128x1 hardswish
+[ 37] val 23.00% fit  24.72 | 2.69ms 0.398MB mem 1.882MB | r20 s8 | dws k7 96x1 leaky_relu | mbconv k3 128x1 hardswish
+[ 38] val 25.10% fit  30.87 | 0.93ms 0.168MB mem 0.301MB | r20 s8 | dws k7 32x1 leaky_relu | conv k3 128x1 silu
+[ 39] val 23.60% fit  28.19 | 0.98ms 0.242MB mem 0.384MB | r20 s8 | dws k7 48x1 leaky_relu | conv k3 128x1 silu
+Search finished: 40 candidates, 19 trained, 21 rejected by constraints
+BEST: r24 s16 | conv k3 96x1 relu | dws k7 128x3 leaky_relu | val 31.1% | fitness 35.331 | 1.419ms 0.3417MB mem 1.286MB
+Saved D:\Edge assignment\edge_a4\results\nas\best_arch.json and search_history.csv/json

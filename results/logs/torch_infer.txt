@@ -1,0 +1,63 @@
+
+=== mobilenetv2_baseline  (mobilenetv2, cifar100, input 32px)
+  test0000_beaver.png          -> caterpillar 4.0%, fox 3.3%, snail 3.1%
+  test0100_dolphin.png         -> mountain 17.1%, dolphin 12.7%, shark 9.4%
+  test0200_otter.png           -> telephone 13.2%, dinosaur 9.3%, cockroach 6.2%
+  test0300_seal.png            -> tulip 5.4%, aquarium_fish 3.3%, sunflower 3.2%
+  test0400_whale.png           -> telephone 10.6%, dinosaur 5.6%, trout 5.2%
+  test0500_aquarium_fish.png   -> orange 10.9%, aquarium_fish 9.7%, sunflower 9.7%
+  6 images in 66.8 ms (CPU, PyTorch)
+
+=== mobilenetv2_kd  (mobilenetv2, cifar100, input 32px)
+  test0000_beaver.png          -> kangaroo 3.6%, shrew 3.6%, raccoon 3.4%
+  test0100_dolphin.png         -> shark 11.9%, whale 10.8%, dolphin 9.6%
+  test0200_otter.png           -> chair 4.1%, cockroach 3.9%, lamp 3.3%
+  test0300_seal.png            -> tulip 4.3%, sunflower 3.2%, boy 2.5%
+  test0400_whale.png           -> chair 4.9%, trout 4.3%, lamp 4.2%
+  test0500_aquarium_fish.png   -> poppy 13.9%, tulip 11.5%, aquarium_fish 8.8%
+  6 images in 18.5 ms (CPU, PyTorch)
+
+=== squeezenet_baseline  (squeezenet, cifar100, input 32px)
+  test0000_beaver.png          -> leopard 6.1%, kangaroo 5.5%, shrew 4.0%
+  test0100_dolphin.png         -> whale 35.3%, ray 10.2%, shark 9.3%
+  test0200_otter.png           -> telephone 11.7%, chair 8.9%, trout 7.0%
+  test0300_seal.png            -> aquarium_fish 6.3%, poppy 5.7%, tulip 5.0%
+  test0400_whale.png           -> telephone 8.0%, trout 4.4%, chair 3.5%
+  test0500_aquarium_fish.png   -> aquarium_fish 10.6%, poppy 8.1%, sweet_pepper 6.1%
+  6 images in 19.1 ms (CPU, PyTorch)
+
+=== squeezenet_kd  (squeezenet, cifar100, input 32px)
+  test0000_beaver.png          -> raccoon 2.4%, kangaroo 2.2%, leopard 2.2%
+  test0100_dolphin.png         -> mountain 9.9%, whale 7.9%, dolphin 7.0%
+  test0200_otter.png           -> rocket 2.3%, bowl 2.2%, lamp 2.1%
+  test0300_seal.png            -> tulip 2.2%, crab 2.1%, mushroom 2.1%
+  test0400_whale.png           -> bowl 2.4%, lamp 2.2%, spider 1.9%
+  test0500_aquarium_fish.png   -> tulip 2.2%, mouse 1.9%, mushroom 1.8%
+  6 images in 11.0 ms (CPU, PyTorch)
+
+=== efficientnet_lite0_baseline  (efficientnet_lite0, cifar100, input 32px)
+  test0000_beaver.png          -> leopard 6.1%, porcupine 4.2%, lion 4.1%
+  test0100_dolphin.png         -> whale 19.0%, cloud 18.4%, shark 13.2%
+  test0200_otter.png           -> trout 9.7%, chair 8.1%, telephone 6.5%
+  test0300_seal.png            -> tulip 8.0%, apple 7.3%, rose 6.1%
+  test0400_whale.png           -> trout 10.2%, chair 6.7%, telephone 5.3%
+  test0500_aquarium_fish.png   -> poppy 23.8%, rose 12.7%, orange 9.5%
+  6 images in 23.4 ms (CPU, PyTorch)
+
+=== efficientnet_lite0_kd  (efficientnet_lite0, cifar100, input 32px)
+  test0000_beaver.png          -> raccoon 3.7%, lion 3.3%, kangaroo 3.1%
+  test0100_dolphin.png         -> shark 10.5%, whale 8.2%, mountain 6.6%
+  test0200_otter.png           -> chair 3.5%, lamp 2.8%, cup 2.6%
+  test0300_seal.png            -> can 2.7%, woman 2.7%, girl 2.3%
+  test0400_whale.png           -> otter 2.2%, couch 2.0%, seal 1.9%
+  test0500_aquarium_fish.png   -> orange 17.9%, sunflower 17.5%, aquarium_fish 6.9%
+  6 images in 18.7 ms (CPU, PyTorch)
+
+=== nas_best  (nas, cifar10, input 24px)
+  test0000_airplane.png        -> ship 86.5%, airplane 12.6%, automobile 0.4%
+  test1000_automobile.png      -> automobile 36.4%, dog 25.6%, airplane 14.8%
+  test2000_bird.png            -> bird 52.1%, dog 29.5%, deer 8.7%
+  test3000_cat.png             -> dog 54.1%, cat 41.2%, frog 2.1%
+  test4000_deer.png            -> airplane 33.7%, bird 33.0%, deer 16.4%
+  test5000_dog.png             -> dog 70.5%, cat 22.3%, bird 2.5%
+  6 images in 8.0 ms (CPU, PyTorch)

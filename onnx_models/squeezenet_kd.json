@@ -1,0 +1,9 @@
+{
+  "name": "squeezenet_kd",
+  "arch": "squeezenet",
+  "dataset": "cifar100",
+  "num_classes": 100,
+  "resolution": 32,
+  "method": "kd",
+  "train_top1": 4.55
+}

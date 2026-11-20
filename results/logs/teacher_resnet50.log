@@ -1,0 +1,4 @@
+Teacher ResNet-50 | params 23.71M | device cpu | {'epochs': 2, 'lr': 0.05, 'batch_size': 128, 'no_pretrained': False, 'stem_stride': 2, 'train_subset': 6000, 'test_subset': 2000, 'threads': 4, 'seed': 42}
+[teacher] epoch   1/2 | train loss 4.146 acc 10.68% | test loss 3.429 top1 20.95% top5 46.60% | 159.9s
+[teacher] epoch   2/2 | train loss 2.856 acc 36.89% | test loss 2.302 top1 39.15% top5 72.35% | 154.5s
+Saved teacher checkpoint -> D:\Edge assignment\edge_a4\checkpoints\teacher_resnet50.pt (top-1 39.15%)

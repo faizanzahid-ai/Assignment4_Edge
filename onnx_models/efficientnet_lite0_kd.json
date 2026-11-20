@@ -1,0 +1,9 @@
+{
+  "name": "efficientnet_lite0_kd",
+  "arch": "efficientnet_lite0",
+  "dataset": "cifar100",
+  "num_classes": 100,
+  "resolution": 32,
+  "method": "kd",
+  "train_top1": 6.15
+}

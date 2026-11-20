@@ -1,0 +1,4 @@
+student,params_M,baseline_top1,kd_top1,gain_pts,teacher_top1,compression_x
+mobilenetv2,2.352,8.45,6.2,-2.25,39.15,10.1
+squeezenet,0.777,8.45,4.55,-3.9,39.15,30.5
+efficientnet_lite0,3.499,9.45,6.15,-3.3,39.15,6.8

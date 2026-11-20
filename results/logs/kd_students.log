@@ -1,0 +1,13 @@
+Loaded teacher ResNet-50 (test top-1 39.15%)
+=== KD mobilenetv2 | params 2.35M | {'arch': 'all', 'epochs': 2, 'lr': 0.1, 'batch_size': 128, 'T': 4.0, 'alpha': 0.7, 'beta': 1.0, 'no_soft': False, 'no_features': False, 'train_subset': 6000, 'test_subset': 2000, 'threads': 4, 'seed': 42}
+[kd/mobilenetv2] epoch   1/2 | loss 5.797 (hard 4.527 soft 1.297 feat 3.532) | train acc 1.94% | test top1 0.95% top5 4.75% | 153.4s
+[kd/mobilenetv2] epoch   2/2 | loss 4.795 (hard 4.206 soft 1.103 feat 2.761) | train acc 4.62% | test top1 6.20% top5 21.20% | 122.7s
+Saved D:\Edge assignment\edge_a4\checkpoints\mobilenetv2_kd.pt (top-1 6.20%)
+=== KD squeezenet | params 0.78M | {'arch': 'all', 'epochs': 2, 'lr': 0.1, 'batch_size': 128, 'T': 4.0, 'alpha': 0.7, 'beta': 1.0, 'no_soft': False, 'no_features': False, 'train_subset': 6000, 'test_subset': 2000, 'threads': 4, 'seed': 42}
+[kd/squeezenet] epoch   1/2 | loss 5.946 (hard 4.739 soft 1.582 feat 3.418) | train acc 2.12% | test top1 3.05% top5 11.70% | 70.5s
+[kd/squeezenet] epoch   2/2 | loss 4.591 (hard 4.337 soft 1.196 feat 2.453) | train acc 4.09% | test top1 4.55% top5 16.25% | 70.6s
+Saved D:\Edge assignment\edge_a4\checkpoints\squeezenet_kd.pt (top-1 4.55%)
+=== KD efficientnet_lite0 | params 3.50M | {'arch': 'all', 'epochs': 2, 'lr': 0.1, 'batch_size': 128, 'T': 4.0, 'alpha': 0.7, 'beta': 1.0, 'no_soft': False, 'no_features': False, 'train_subset': 6000, 'test_subset': 2000, 'threads': 4, 'seed': 42}
+[kd/efficientnet_lite0] epoch   1/2 | loss 5.758 (hard 4.514 soft 1.282 feat 3.507) | train acc 1.89% | test top1 0.95% top5 5.15% | 138.9s
+[kd/efficientnet_lite0] epoch   2/2 | loss 4.741 (hard 4.158 soft 1.072 feat 2.743) | train acc 5.16% | test top1 6.15% top5 21.75% | 138.4s
+Saved D:\Edge assignment\edge_a4\checkpoints\efficientnet_lite0_kd.pt (top-1 6.15%)

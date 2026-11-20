@@ -1,0 +1,9 @@
+{
+  "name": "mobilenetv2_baseline",
+  "arch": "mobilenetv2",
+  "dataset": "cifar100",
+  "num_classes": 100,
+  "resolution": 32,
+  "method": "baseline",
+  "train_top1": 8.45
+}
